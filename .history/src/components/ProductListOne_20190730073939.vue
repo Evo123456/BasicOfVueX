@@ -17,11 +17,9 @@ import {mapGetters} from 'vuex';
 
 export default {
     computed: {
-        products(){
-            return this.$store.state.products
-        },
         ...mapGetters([
-         'saleProducts'
+         'saleProducts',
+         'products'
         ])
     },
     // remember methods cannot be tracked mutations can be thus use them 

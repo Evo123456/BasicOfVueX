@@ -26,17 +26,13 @@ export default {
     },
     // remember methods cannot be tracked mutations can be thus use them 
     methods:{
-    
+        reducePrice:function(amount){
             // this.$store.state.products.forEach(product =>{
             //     product.price -= 1;
             // })
             // by dispatching action instead of committing mutation action the changes in data and mutation pop-up will be in sync in devtools 
-           
-           //this.$store.dispatch('reducePrice',amount);
-           ...mapActions([
-               'reducePrice'
-           ])
-        
+            this.$store.dispatch('reducePrice',amount);
+        }
     }
 }
 </script>
