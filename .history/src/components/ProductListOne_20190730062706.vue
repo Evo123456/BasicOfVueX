@@ -7,7 +7,7 @@
                 <span class="price">£{{ product.price }}</span>
             </li>
         </ul>
-        <button v-on:click="reducePrice(4)">Reduce Price</button>
+        <button v-on:click="reducePrice">Reduce Price</button>
     </div>
 </template>
 
@@ -23,12 +23,11 @@ export default {
     },
     // remember methods cannot be tracked mutations can be thus use them 
     methods:{
-        reducePrice:function(amount){
+        reducePrice:function(){
             // this.$store.state.products.forEach(product =>{
             //     product.price -= 1;
             // })
-            // by dispatching action instead of committing mutation action the changes in data and mutation pop-up will be in sync in devtools 
-            this.$store.dispatch('reducePrice',amount);
+            this.$store.commit('reducePrice');
         }
     }
 }

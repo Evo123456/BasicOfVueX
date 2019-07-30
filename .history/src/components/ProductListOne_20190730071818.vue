@@ -28,7 +28,7 @@ export default {
             //     product.price -= 1;
             // })
             // by dispatching action instead of committing mutation action the changes in data and mutation pop-up will be in sync in devtools 
-            this.$store.dispatch('reducePrice',amount);
+            this.$store.dispatch('reducePrice');
         }
     }
 }

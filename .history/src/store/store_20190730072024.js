@@ -30,7 +30,7 @@ export const store = new Vuex.Store({
     mutations:{
       reducePrice: (state,payload) =>{
         state.products.forEach(product =>{
-          product.price -= payload;
+          product.price -= 1;
       });
     }
    },
